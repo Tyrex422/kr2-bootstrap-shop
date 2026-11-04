@@ -9,7 +9,25 @@
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="bg-light d-flex flex-column min-vh-100" data-p="catalog">
-  <header id="nav"></header>
+  <header id="nav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">🎵 Резонанс</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Переключить навигацию">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Каталог</a></li>
+            <li class="nav-item"><a class="nav-link" href="rent.html">Аренда</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacts.html">Отзывы и контакты</a></li>
+            <li class="nav-item ms-lg-2"><a class="btn btn-warning btn-sm" href="order.html">Забронировать</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
   <main class="flex-grow-1">
 
     <div class="container my-5">
@@ -25,7 +43,14 @@
             </div>
             <div class="mb-3">
               <label class="form-label" for="cat">Категория</label>
-              <select id="cat" class="form-select"></select>
+              <select id="cat" class="form-select">
+                <option value="">Все категории</option>
+                <option value="g">Гитары</option>
+                <option value="k">Клавишные</option>
+                <option value="d">Ударные</option>
+                <option value="w">Духовые</option>
+                <option value="a">Звук</option>
+              </select>
             </div>
             <div class="mb-3">
               <label class="form-label">Цена за сутки</label>
@@ -47,9 +72,222 @@
           </form>
         </aside>
         <div class="col-12 col-lg-9">
-          <div class="row g-4" id="grid"></div>
+          <div class="row g-4" id="grid">
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="bg-body-secondary text-center py-4 emoji">🎸</div>
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between gap-2">
+                    <h2 class="h5 card-title">Акустическая гитара D-100</h2>
+                  </div>
+                  <p class="text-muted small mb-2">Yamaha · Гитары</p>
+                  <p class="mb-1">600 ₽/сутки · 3 000 ₽/неделя</p>
+                  <div class="mt-auto d-flex flex-wrap gap-2 pt-2">
+                    <a class="btn btn-outline-primary" href="product.html?id=1">Подробнее</a>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal" data-book="1">Забронировать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="bg-body-secondary text-center py-4 emoji">🎸</div>
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between gap-2">
+                    <h2 class="h5 card-title">Электрогитара Stratocaster</h2>
+                  </div>
+                  <p class="text-muted small mb-2">Fender · Гитары</p>
+                  <p class="mb-1">900 ₽/сутки · 4 500 ₽/неделя</p>
+                  <div class="mt-auto d-flex flex-wrap gap-2 pt-2">
+                    <a class="btn btn-outline-primary" href="product.html?id=2">Подробнее</a>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal" data-book="2">Забронировать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="bg-body-secondary text-center py-4 emoji">🎸</div>
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between gap-2">
+                    <h2 class="h5 card-title">Бас-гитара Jazz Bass</h2>
+                    <span class="badge bg-success align-self-start">Новинка</span>
+                  </div>
+                  <p class="text-muted small mb-2">Squier · Гитары</p>
+                  <p class="mb-1">800 ₽/сутки · 4 000 ₽/неделя</p>
+                  <div class="mt-auto d-flex flex-wrap gap-2 pt-2">
+                    <a class="btn btn-outline-primary" href="product.html?id=3">Подробнее</a>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal" data-book="3">Забронировать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="bg-body-secondary text-center py-4 emoji">🎹</div>
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between gap-2">
+                    <h2 class="h5 card-title">Цифровое пианино P-45</h2>
+                  </div>
+                  <p class="text-muted small mb-2">Yamaha · Клавишные</p>
+                  <p class="mb-1">1 200 ₽/сутки · 6 000 ₽/неделя</p>
+                  <div class="mt-auto d-flex flex-wrap gap-2 pt-2">
+                    <a class="btn btn-outline-primary" href="product.html?id=4">Подробнее</a>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal" data-book="4">Забронировать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="bg-body-secondary text-center py-4 emoji">🎹</div>
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between gap-2">
+                    <h2 class="h5 card-title">Синтезатор Prophet-12</h2>
+                    <span class="badge bg-success align-self-start">Новинка</span>
+                  </div>
+                  <p class="text-muted small mb-2">Sequential · Клавишные</p>
+                  <p class="mb-1">1 800 ₽/сутки · 9 000 ₽/неделя</p>
+                  <div class="mt-auto d-flex flex-wrap gap-2 pt-2">
+                    <a class="btn btn-outline-primary" href="product.html?id=5">Подробнее</a>
+                    <span class="badge bg-secondary align-self-center">Сейчас в аренде</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="bg-body-secondary text-center py-4 emoji">🎹</div>
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between gap-2">
+                    <h2 class="h5 card-title">MIDI-клавиатура Keystation</h2>
+                  </div>
+                  <p class="text-muted small mb-2">M-Audio · Клавишные</p>
+                  <p class="mb-1">400 ₽/сутки · 2 000 ₽/неделя</p>
+                  <div class="mt-auto d-flex flex-wrap gap-2 pt-2">
+                    <a class="btn btn-outline-primary" href="product.html?id=6">Подробнее</a>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal" data-book="6">Забронировать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="bg-body-secondary text-center py-4 emoji">🥁</div>
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between gap-2">
+                    <h2 class="h5 card-title">Ударная установка Stage</h2>
+                  </div>
+                  <p class="text-muted small mb-2">Pearl · Ударные</p>
+                  <p class="mb-1">2 000 ₽/сутки · 10 000 ₽/неделя</p>
+                  <div class="mt-auto d-flex flex-wrap gap-2 pt-2">
+                    <a class="btn btn-outline-primary" href="product.html?id=7">Подробнее</a>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal" data-book="7">Забронировать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="bg-body-secondary text-center py-4 emoji">🥁</div>
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between gap-2">
+                    <h2 class="h5 card-title">Электронные барабаны TD-1</h2>
+                    <span class="badge bg-success align-self-start">Новинка</span>
+                  </div>
+                  <p class="text-muted small mb-2">Roland · Ударные</p>
+                  <p class="mb-1">1 500 ₽/сутки · 7 500 ₽/неделя</p>
+                  <div class="mt-auto d-flex flex-wrap gap-2 pt-2">
+                    <a class="btn btn-outline-primary" href="product.html?id=8">Подробнее</a>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal" data-book="8">Забронировать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="bg-body-secondary text-center py-4 emoji">🎷</div>
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between gap-2">
+                    <h2 class="h5 card-title">Саксофон альт AS-100</h2>
+                  </div>
+                  <p class="text-muted small mb-2">Yamaha · Духовые</p>
+                  <p class="mb-1">1 000 ₽/сутки · 5 000 ₽/неделя</p>
+                  <div class="mt-auto d-flex flex-wrap gap-2 pt-2">
+                    <a class="btn btn-outline-primary" href="product.html?id=9">Подробнее</a>
+                    <span class="badge bg-secondary align-self-center">Сейчас в аренде</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="bg-body-secondary text-center py-4 emoji">🎷</div>
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between gap-2">
+                    <h2 class="h5 card-title">Флейта FL-221</h2>
+                  </div>
+                  <p class="text-muted small mb-2">Jupiter · Духовые</p>
+                  <p class="mb-1">500 ₽/сутки · 2 500 ₽/неделя</p>
+                  <div class="mt-auto d-flex flex-wrap gap-2 pt-2">
+                    <a class="btn btn-outline-primary" href="product.html?id=10">Подробнее</a>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal" data-book="10">Забронировать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="bg-body-secondary text-center py-4 emoji">🔊</div>
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between gap-2">
+                    <h2 class="h5 card-title">Акустическая система Eon</h2>
+                    <span class="badge bg-success align-self-start">Новинка</span>
+                  </div>
+                  <p class="text-muted small mb-2">JBL · Звук</p>
+                  <p class="mb-1">1 100 ₽/сутки · 5 500 ₽/неделя</p>
+                  <div class="mt-auto d-flex flex-wrap gap-2 pt-2">
+                    <a class="btn btn-outline-primary" href="product.html?id=11">Подробнее</a>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal" data-book="11">Забронировать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="bg-body-secondary text-center py-4 emoji">🔊</div>
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between gap-2">
+                    <h2 class="h5 card-title">Микрофон SM58</h2>
+                  </div>
+                  <p class="text-muted small mb-2">Shure · Звук</p>
+                  <p class="mb-1">300 ₽/сутки · 1 500 ₽/неделя</p>
+                  <div class="mt-auto d-flex flex-wrap gap-2 pt-2">
+                    <a class="btn btn-outline-primary" href="product.html?id=12">Подробнее</a>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal" data-book="12">Забронировать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <nav class="mt-4" aria-label="Страницы">
-            <ul class="pagination justify-content-center" id="pager"></ul>
+            <ul class="pagination justify-content-center" id="pager">
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+            </ul>
           </nav>
         </div>
       </div>
@@ -87,7 +325,15 @@
     </div>
 
   </main>
-  <footer id="foot"></footer>
+  <footer id="foot">
+    <div class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row align-items-center g-3">
+          <div class="col-12 col-md-6">© 2026 Студия «Резонанс». Учебный проект.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/app.js"></script>
 </body>
