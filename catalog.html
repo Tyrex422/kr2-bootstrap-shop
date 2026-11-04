@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог — Резонанс</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100" data-p="catalog">
+  <header id="nav"></header>
+  <main class="flex-grow-1">
+
+    <div class="container my-5">
+      <div class="alert alert-info" role="alert">Подберите инструмент по категории, цене, названию или бренду.</div>
+      <h1 class="h2 mb-4">Каталог инструментов</h1>
+      <div class="row g-4">
+        <aside class="col-12 col-lg-3">
+          <button class="btn btn-outline-secondary w-100 d-lg-none mb-3" data-bs-toggle="collapse" data-bs-target="#flt">Фильтры</button>
+          <form id="flt" class="collapse d-lg-block card card-body shadow-sm">
+            <div class="mb-3">
+              <label class="form-label" for="q">Поиск</label>
+              <input id="q" class="form-control" placeholder="Название или бренд">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="cat">Категория</label>
+              <select id="cat" class="form-select"></select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Цена за сутки</label>
+              <div class="input-group">
+                <input id="min" type="number" min="0" class="form-control" placeholder="от">
+                <input id="max" type="number" min="0" class="form-control" placeholder="до">
+                <span class="input-group-text">₽</span>
+              </div>
+            </div>
+            <div>
+              <label class="form-label" for="sort">Сортировка</label>
+              <select id="sort" class="form-select">
+                <option value="">По умолчанию</option>
+                <option value="price">По цене</option>
+                <option value="pop">По популярности</option>
+                <option value="new">По новизне</option>
+              </select>
+            </div>
+          </form>
+        </aside>
+        <div class="col-12 col-lg-9">
+          <div class="row g-4" id="grid"></div>
+          <nav class="mt-4" aria-label="Страницы">
+            <ul class="pagination justify-content-center" id="pager"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bm" aria-hidden="true">
+      <div class="modal-dialog">
+        <form class="modal-content needs-validation" novalidate>
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="bm">Быстрая бронь: <span id="mi"></span></h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-success d-none ok" role="alert">Спасибо! Заявка отправлена, мы свяжемся с вами.</div>
+            <div class="mb-3">
+              <label class="form-label" for="m1">Имя</label>
+              <input id="m1" name="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="m2">Телефон</label>
+              <input id="m2" name="phone" type="tel" class="form-control" pattern="\+?[0-9 ()\-]{10,18}" required>
+              <div class="invalid-feedback">Введите телефон</div>
+            </div>
+            <div class="form-check">
+              <input id="m3" class="form-check-input" type="checkbox" required>
+              <label class="form-check-label" for="m3">Согласен на обработку данных</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+  <footer id="foot"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

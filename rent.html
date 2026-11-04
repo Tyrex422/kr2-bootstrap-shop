@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аренда — Резонанс</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100" data-p="rent">
+  <header id="nav"></header>
+  <main class="flex-grow-1">
+
+    <div class="container my-5">
+      <h1 class="h2 mb-4">Аренда инструментов</h1>
+      <form id="flt" class="row g-3 card card-body shadow-sm mx-0 mb-4">
+        <div class="col-12 col-md-4">
+          <label class="form-label" for="q">Поиск по названию</label>
+          <input id="q" class="form-control">
+        </div>
+        <div class="col-12 col-md-4">
+          <label class="form-label" for="cat">Категория</label>
+          <select id="cat" class="form-select"></select>
+        </div>
+        <div class="col-12 col-md-4">
+          <label class="form-label" for="term">Срок аренды</label>
+          <select id="term" class="form-select">
+            <option value="1">1 сутки</option>
+            <option value="3">3 суток</option>
+            <option value="7">Неделя</option>
+            <option value="14">2 недели</option>
+            <option value="30">Месяц</option>
+          </select>
+        </div>
+      </form>
+      <div class="row g-4" id="grid"></div>
+      <h2 class="text-center my-5">Как работает аренда</h2>
+      <div class="row g-4" id="steps"></div>
+      <h2 class="mt-5 mb-3">Условия аренды</h2>
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <div class="alert alert-info h-100"><b>Залог:</b> 30% стоимости инструмента, возвращается при сдаче.</div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="alert alert-info h-100"><b>Сроки:</b> от 1 суток до 3 месяцев, продление по звонку.</div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="alert alert-info h-100"><b>Доставка:</b> по городу от 300 ₽, самовывоз бесплатно.</div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="alert alert-warning h-100"><b>При поломке:</b> сразу позвоните нам — заменим инструмент, ремонт по вине арендатора оплачивается.</div>
+        </div>
+      </div>
+      <h2 class="mt-5 mb-3">FAQ по аренде</h2>
+      <div class="accordion" id="faq"></div>
+    </div>
+
+  </main>
+  <footer id="foot"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

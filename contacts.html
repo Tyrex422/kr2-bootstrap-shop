@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Отзывы и контакты — Резонанс</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100" data-p="contacts">
+  <header id="nav"></header>
+  <main class="flex-grow-1">
+
+    <div class="container my-5">
+      <h1 class="h2 mb-4">Отзывы и контакты</h1>
+      <div class="row g-4">
+        <div class="col-12 col-lg-5">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h2 class="h5">Контакты</h2>
+              <p><i class="bi bi-telephone"></i> <a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+              <p><i class="bi bi-envelope"></i> <a href="mailto:info@rezonans.example">info@rezonans.example</a></p>
+              <p><i class="bi bi-geo-alt"></i> г. Москва, ул. Музыкальная, д. 12 (ежедневно 10:00–20:00)</p>
+              <div class="fs-3 d-flex gap-3">
+                <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              </div>
+              <div class="ratio ratio-16x9 mt-3">
+                <iframe title="Карта" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=37.57%2C55.74%2C37.67%2C55.78&amp;layer=mapnik"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-7">
+          <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+              <h2 class="h5 mb-0">Обратная связь</h2>
+            </div>
+            <div class="card-body">
+              <div class="alert alert-success d-none ok" role="alert">Спасибо! Заявка отправлена, мы свяжемся с вами.</div>
+              <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="c1">Имя</label>
+                    <input id="c1" name="name" class="form-control" minlength="2" required>
+                    <div class="invalid-feedback">Введите имя (от 2 букв)</div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="c2">Телефон</label>
+                    <input id="c2" name="phone" type="tel" class="form-control" pattern="\+?[0-9 ()\-]{10,18}" required>
+                    <div class="invalid-feedback">Формат: +7 900 000-00-00</div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="c3">Какой инструмент интересует</label>
+                    <select id="c3" name="product" class="form-select" data-inst required></select>
+                    <div class="invalid-feedback">Выберите инструмент</div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="c4">Комментарий</label>
+                    <textarea id="c4" name="comment" class="form-control" rows="3" minlength="5" required></textarea>
+                    <div class="invalid-feedback">Напишите хотя бы 5 символов</div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Отправить</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="mt-5 mb-3">Отзывы арендаторов</h2>
+      <div class="row g-4" id="rev"></div>
+      <h2 class="mt-5 mb-3">FAQ</h2>
+      <div class="accordion" id="faq"></div>
+    </div>
+
+  </main>
+  <footer id="foot"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

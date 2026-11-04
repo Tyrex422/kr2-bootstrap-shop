@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Бронирование — Резонанс</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100" data-p="order">
+  <header id="nav"></header>
+  <main class="flex-grow-1">
+
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+              <h1 class="h4 mb-0">Бронирование инструмента</h1>
+            </div>
+            <div class="card-body">
+              <div class="alert alert-info" role="alert">Поля со звёздочкой обязательны.</div>
+              <div class="alert alert-success d-none ok" role="alert">Спасибо! Заявка отправлена, мы свяжемся с вами.</div>
+              <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="o1">Имя *</label>
+                    <input id="o1" name="name" class="form-control" required>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="o2">E-mail *</label>
+                    <input id="o2" name="email" type="email" class="form-control" required>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="o3">Телефон *</label>
+                    <div class="input-group">
+                      <span class="input-group-text">+7</span>
+                      <input id="o3" name="phone" type="tel" class="form-control" placeholder="900 000-00-00" pattern="[0-9 ()\-]{10,14}" required>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="pr">Инструмент *</label>
+                    <select id="pr" name="product" class="form-select" data-inst required></select>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="o4">Дата начала *</label>
+                    <input id="o4" name="from" type="date" class="form-control" required>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="o5">Срок *</label>
+                    <select id="o5" name="term" class="form-select">
+                      <option>1 сутки</option>
+                      <option>3 суток</option>
+                      <option>Неделя</option>
+                      <option>Месяц</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input id="o6" name="delivery" class="form-check-input" type="checkbox">
+                      <label class="form-check-label" for="o6">Нужна доставка</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="o7">Комментарий</label>
+                    <textarea id="o7" name="comment" class="form-control" rows="3"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input id="o8" class="form-check-input" type="checkbox" required>
+                      <label class="form-check-label" for="o8">Согласен на обработку данных *</label>
+                    </div>
+                  </div>
+                  <div class="col-12 d-flex gap-2">
+                    <button class="btn btn-primary" type="submit">Забронировать</button>
+                    <button class="btn btn-outline-secondary" type="reset">Очистить</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer id="foot"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

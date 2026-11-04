@@ -1,7 +1,8 @@
-body {
-  min-height: 100vh;
+.card:hover { 
+    transform: translateY(-2px);
+    transition: transform .15s; 
 }
-
-.placeholder-box {
-  min-height: 240px;
-}
+.emoji { 
+    font-size: 4rem;
+    line-height: 1;
+    }
