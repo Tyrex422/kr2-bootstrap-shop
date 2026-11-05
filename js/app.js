@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 // Данные инструментов (для страницы товара). Файлы фото лежат в images/.
 var CATS = { g: 'Гитары', k: 'Клавишные', d: 'Ударные', w: 'Духовые', a: 'Звук' };
 var EMOJI = { g: '🎸', k: '🎹', d: '🥁', w: '🎷', a: '🔊' };
@@ -83,7 +82,6 @@ if (document.body.dataset.p === 'product') {
   }).join('');
 }
 
->>>>>>> d288aae (Update 3)
 // Небольшие скрипты: подстановка названия в модалку, проверка дат, валидация форм.
 
 // Подстановка названия инструмента в заголовок модалки быстрой брони
@@ -119,13 +117,13 @@ if (avForm) {
     } else if (from <= new Date('2026-11-13') && to >= new Date('2026-11-10')) {
       res.innerHTML = '<div class="alert alert-danger">На эти даты инструмент занят</div>';
     } else {
-<<<<<<< HEAD
+
       // 900 ₽ в сутки, 4500 ₽ в неделю — как у Stratocaster
       var total = Math.floor(days / 7) * 4500 + (days % 7) * 900;
-=======
+
       // цены берём у текущего инструмента
       var total = Math.floor(days / 7) * currentProduct.week + (days % 7) * currentProduct.day;
->>>>>>> d288aae (Update 3)
+
       res.innerHTML = '<div class="alert alert-success">Свободно! ' + days + ' дн. — ' +
         total.toLocaleString('ru-RU') + ' ₽</div>';
     }
@@ -147,9 +145,9 @@ document.querySelectorAll('.needs-validation').forEach(function (form) {
       if (alert) alert.classList.remove('d-none');
     }
   });
-<<<<<<< HEAD
+
 });
-=======
+
 });
 
 // Кнопка «Наверх»: появляется после прокрутки, плавно возвращает к началу страницы
@@ -178,4 +176,3 @@ document.querySelectorAll('.needs-validation').forEach(function (form) {
     window.scrollTo({ top: 0, behavior: calm ? 'auto' : 'smooth' });
   });
 })();
->>>>>>> d288aae (Update 3)
